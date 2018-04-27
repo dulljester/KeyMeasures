@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:clickable="false"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:descendantFocusability="blocksDescendants"
+    android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/textViewHours"
+        android:layout_width="65dp"
+        android:layout_height="match_parent"
+        android:text="Hours"
+        android:textColor="@color/matteBlack"
+        android:textSize="@dimen/listEntryFontSize"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="8dp"
+        android:paddingLeft="@dimen/entryLeftPadding"
+        android:paddingTop="@dimen/entryVerticalPadding"
+        android:paddingBottom="@dimen/entryVerticalPadding"
+        />
+
+    <TextView
+        android:id="@+id/textViewDirectionName"
+        android:layout_width="223dp"
+        android:layout_height="match_parent"
+        android:textSize="@dimen/listEntryFontSize"
+        android:text="Direction"
+        android:textColor="@color/matteBlack"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/textViewHours"
+        app:layout_constraintTop_toTopOf="parent"
+        android:paddingLeft="@dimen/entryLeftPadding"
+        android:paddingTop="@dimen/entryVerticalPadding"
+        android:paddingBottom="@dimen/entryVerticalPadding"
+        />
+</android.support.constraint.ConstraintLayout>
