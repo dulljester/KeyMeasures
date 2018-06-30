@@ -26,4 +26,44 @@
     <color name="paper">#EFEFEF</color>
     <color name="goldLeaf">#D1B280</color>
     <color name="silver">#594D46</color>
+
+    <color name="stone">#336B87</color>
+    <color name="autumnFoliage">#763626</color>
+    <color name="mist">#90AFC5</color>
+
+    <color name="meadow">#598234</color>
+    <color name="moss">#AEBD38</color>
+    <color name="thunderCloud">#505160</color>
+    <color name="waterfall">#68829E</color>
+
+    <color name="ocean">#07575B</color>
+    <color name="deepAqua">#003B46</color>
+    <color name="wave">#66A5AD</color>
+    <color name="seafoam">#C4DFE6</color>
+
+    <color name="crimson">#8D230F</color>
+    <color name="forest">#1E434C</color>
+    <color name="rust">#9B4F0F</color>
+    <color name="gold">#c99e10</color>
+
+    <color name="blueberry">#063852</color>
+    <color name="tangerine">#F0810F</color>
+    <color name="daffodil">#E6DF44</color>
+    <color name="darkNavy">#011A27</color>
+
+    <color name="navy">#00293C</color>
+    <color name="peacockBlue">#1E656D</color>
+    <color name="ivory">#F1F3CE</color>
+    <color name="candyApple">#F62A00</color>
+
+    <color name="midnightBlue">#1E1F26</color>
+    <color name="indigoInk">#283655</color>
+    <color name="blueBerry">#4D648D</color>
+    <color name="periwinkle">#D0E1F9</color>
+
+    <color name="berry">#A10115</color>
+    <color name="cherry">#D72C16</color>
+    <color name="chiffon">#F0EFEA</color>
+    <color name="smoke">#C0B2B5</color>
+
 </resources>

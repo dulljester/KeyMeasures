@@ -21,6 +21,10 @@ android {
     defaultConfig {
         vectorDrawables.useSupportLibrary = true
     }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
 }
 
 configurations.all {
@@ -52,7 +56,15 @@ dependencies {
     testImplementation 'com.android.support.test:rules:0.5'
     testImplementation 'com.android.support:support-annotations:25.2.0'
     testImplementation 'com.android.support.test:runner:0.5'
+    // https://mvnrepository.com/artifact/org.jsoup/jsoup
+    implementation group: 'org.jsoup', name: 'jsoup', version: '1.8.3'
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.0.3'
     //implementation 'com.android.support:appcompat-v7:23.2.0'
+
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test:rules:1.0.2'
+
 }
 
 apply plugin: 'com.google.gms.google-services'

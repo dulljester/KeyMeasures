@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transition xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- The drawables used here can be solid colors, gradients, shapes, images, etc. -->
+    <item android:drawable="@drawable/forapp00" />
+    <item android:drawable="@drawable/forapp01" />
+    <item android:drawable="@drawable/forapp02" />
+    <item android:drawable="@drawable/forapp03" />
+    <item android:drawable="@drawable/forapp04" />
+    <item android:drawable="@drawable/forapp05" />
+    <item android:drawable="@drawable/forapp06" />
+    <item android:drawable="@drawable/forapp07" />
+</transition>

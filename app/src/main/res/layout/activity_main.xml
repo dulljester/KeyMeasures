@@ -19,6 +19,18 @@
         app:srcCompat="@drawable/ic_add_black_24dp"
         app:rippleColor="@color/glossWhite"
         />
+    <TextView
+        android:id="@+id/addButtonTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add activity"
+        app:layout_constraintTop_toBottomOf="@id/addButton"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginVertical="@dimen/entryVerticalPadding"
+        android:textAllCaps="true"
+        android:textColor="@color/matteBlack"
+        />
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline"
@@ -43,6 +55,19 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:layout_editor_absoluteX="147dp"
         tools:layout_editor_absoluteY="398dp"
+        />
+
+    <TextView
+        android:id="@+id/showStatsTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAllCaps="true"
+        android:text="Show Stats"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/overviewButton"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginVertical="@dimen/entryVerticalPadding"
+        android:textColor="@color/matteBlack"
         />
 
     <ImageButton
@@ -79,6 +104,22 @@
         android:textAllCaps="false"
         tools:layout_editor_absoluteX="279dp"
         tools:layout_editor_absoluteY="16dp"
+        />
+
+    <ImageButton
+        android:id="@+id/settingsButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/glossWhite"
+        app:srcCompat="@drawable/ic_settings_black_24dp"
+        tools:layout_editor_absoluteX="271dp"
+        tools:layout_editor_absoluteY="16dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/buttonSaveToFirebase"
+        app:layout_constraintRight_toLeftOf="@+id/buttonLogOut"
+        app:layout_constraintHorizontal_bias="0.95"
+        app:layout_constraintVertical_bias="0.05"
         />
 
 </android.support.constraint.ConstraintLayout>

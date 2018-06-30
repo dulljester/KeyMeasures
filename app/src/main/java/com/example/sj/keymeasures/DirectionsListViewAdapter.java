@@ -61,7 +61,7 @@ class DirectionsListViewAdapter implements ListAdapter {
 
     @Override
     public Object getItem(int i) {
-        return null;
+        return names.get(i);
     }
 
     @Override
@@ -114,12 +114,12 @@ class DirectionsListViewAdapter implements ListAdapter {
 
     @Override
     public int getItemViewType(int i) {
-        return 0;
+        return 1;
     }
 
     @Override
     public int getViewTypeCount() {
-        return hoursFlown.size();
+        return 1;
     }
 
     @Override

@@ -1,0 +1,49 @@
+<vector
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:name="root"
+    android:width="48dp"
+    android:height="48dp"
+    android:viewportHeight="12"
+    android:viewportWidth="12"
+    >
+        <path
+            android:name="clockOuterRing"
+            android:strokeColor="@color/matteBlack"
+            android:strokeWidth="1"
+            android:strokeAlpha="1"
+            android:pathData="M 2,6 C 2,3.8 3.8,2 6,2 C 8.2,2 10,3.8 10,6 C 10,8.2 8.2,10 6,10 C 3.8,10 2,8.2 2,6"
+            >
+        </path>
+        <path
+            android:name="letterN"
+            android:strokeWidth="0.3"
+            android:strokeColor="@color/matteBlack"
+            android:pathData="M 6.5,2.7 L 6.5,4 L 5.5,2.7 L 5.5,4"
+            android:strokeAlpha="1.00"
+            >
+        </path>
+    <group
+        android:name="test"
+        android:translateX="6"
+        android:translateY="6">
+        <group
+            android:name="pivot"
+            android:translateX="-6"
+            android:translateY="-6">
+            <path
+                android:name="magnetArrow"
+                android:fillColor="@color/brickRed"
+                android:fillAlpha="1"
+                android:pathData="M 6,6 L 7,6 L 6,2.5 L 5,6 Z"
+                >
+            </path>
+            <path
+                android:name="otherArrow"
+                android:fillColor="@color/blueBerry"
+                android:fillAlpha="1"
+                android:pathData="M 6,6 L 7,6 L 6,9.5 L 5,6 Z"
+                >
+            </path>
+        </group>
+    </group>
+</vector>

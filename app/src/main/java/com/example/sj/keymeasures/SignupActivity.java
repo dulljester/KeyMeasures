@@ -1,20 +1,32 @@
 package com.example.sj.keymeasures;
 
 import android.content.Intent;
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
+import com.example.sj.keymeasures.algopuzzles.helpers.EnvConstants;
+import com.example.sj.keymeasures.algopuzzles.model.OJFactory;
+import com.example.sj.keymeasures.algopuzzles.model.OjGoal;
+import com.example.sj.keymeasures.algopuzzles.model.OjUser;
+import com.example.sj.keymeasures.algopuzzles.model.OnlineJudge;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
+import java.util.Arrays;
 
 /**
  * User enters email address and sets a password;
@@ -93,12 +105,19 @@ public class SignupActivity extends AppCompatActivity {
                                     Toast.makeText(SignupActivity.this, "Authentication failed." + task.getException(),
                                             Toast.LENGTH_SHORT).show();
                                 } else {
+                                    addAllOnlineJudges();
                                     startActivity(new Intent(SignupActivity.this, MainActivity.class));
                                     finish();
                                 }
                             }
+                            private void addAllOnlineJudges() {
+                                FirebaseUser currentUser= FirebaseAuth.getInstance().getCurrentUser();
+                                DatabaseReference ref= FirebaseDatabase.getInstance().getReference();
+                                String []arr= getResources().getStringArray(R.array.supported_ojs);
+                                for ( String x: arr )
+                                    ref.child("users").child(currentUser.getUid()).child("oj_goals").child(x).setValue(new OjGoal("N/A","N/A",x,1));
+                            }
                         });
-
             }
         });
     }

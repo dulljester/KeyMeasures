@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/firstRowLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_weight="0.50">
+
+        <TextView
+            android:id="@+id/tagTextView"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="TAG"
+            app:layout_constraintHorizontal_weight="0.20"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/ojLinkTextView"
+            android:visibility="visible"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/ojLinkTextView"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:visibility="visible"
+            android:text="Link"
+            app:layout_constraintHorizontal_weight="0.80"
+            app:layout_constraintLeft_toRightOf="@id/tagTextView"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/secondRow"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/firstRowLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintVertical_weight="0.50"
+        app:layout_constraintBottom_toTopOf="@+id/ojWebViewLayout"
+        >
+        <TextView
+            android:id="@+id/ojUserId"
+            android:layout_width="0dp"
+            app:layout_constraintHorizontal_weight="0.43"
+            android:layout_height="match_parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/goalNumbers"
+            android:cursorVisible="true"
+            android:paddingBottom="@dimen/entryVerticalPadding"
+            android:paddingLeft="@dimen/entryLeftPadding"
+            android:paddingRight="@dimen/entryLeftPadding"
+            android:paddingTop="@dimen/entryVerticalPadding"
+            android:background="@color/glossWhite"
+            android:textColor="@color/matteBlack"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/goalNumbers"
+            android:layout_width="0dp"
+            app:layout_constraintHorizontal_weight="0.15"
+            app:layout_constraintLeft_toRightOf="@id/ojUserId"
+            app:layout_constraintRight_toLeftOf="@id/rivalID"
+            android:layout_height="match_parent"
+            android:paddingLeft="@dimen/entryLeftPadding"
+            android:paddingRight="@dimen/entryLeftPadding"
+            android:paddingTop="@dimen/entryVerticalPadding"
+            android:paddingBottom="@dimen/entryVerticalPadding"
+            android:inputType="number"
+            android:background="@color/glossWhite"
+            android:textColor="@color/matteBlack"
+            android:visibility="visible"
+            />
+        <TextView
+            android:id="@+id/rivalID"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            app:layout_constraintLeft_toRightOf="@id/goalNumbers"
+            app:layout_constraintRight_toLeftOf="@id/nextPageImageView"
+            app:layout_constraintHorizontal_weight="0.42"
+            android:paddingLeft="@dimen/entryLeftPadding"
+            android:paddingRight="@dimen/entryLeftPadding"
+            android:paddingTop="@dimen/entryVerticalPadding"
+            android:paddingBottom="@dimen/entryVerticalPadding"
+            android:background="@color/glossWhite"
+            android:textColor="@color/matteBlack"
+            android:visibility="visible"
+            />
+
+        <ImageView
+            android:id="@+id/nextPageImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_keyboard_arrow_right_black_24dp"
+            app:layout_constraintLeft_toRightOf="@id/rivalID"
+            app:layout_constraintRight_toRightOf="parent"
+            />
+    </android.support.constraint.ConstraintLayout>
+</android.support.constraint.ConstraintLayout>

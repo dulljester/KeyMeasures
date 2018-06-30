@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.sj.keymeasures">
     <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.RECORD_VIDEO"/>
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -10,13 +13,31 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".SignupActivity"></activity>
+        <activity
+            android:name=".SettingsActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:windowSoftInputMode="stateHidden|adjustPan"
+            >
+        </activity>
+        <activity android:name=".ResetPasswordActivity"/>
+        <service android:name=".services.OjParserService"
+        />
+        <activity android:name=".EditOnlineJudgeProfileActivity"/>
         <activity android:name=".MainActivity$AddNewEntryFragment">
         </activity>
         <activity android:name=".FragmentDrawGraph">
         </activity>
+        <activity android:name=".DrawGraphs"/>
         <service android:name=".ServiceUpdateDB" />
         <service android:name=".ServiceSaveToFirebase" />
-        <activity android:name=".MainActivity"></activity>
+        <service android:name=".services.PrepareBarChartDataService"
+        />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity android:name=".LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
